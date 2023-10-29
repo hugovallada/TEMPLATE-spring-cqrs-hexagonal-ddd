@@ -1,12 +1,14 @@
 package com.github.hugovallada.templatecqrshexagonal.command.infra.adapters.in;
 
 import com.github.hugovallada.templatecqrshexagonal.command.application.ports.in.TemplateUseCase;
+import org.jmolecules.architecture.hexagonal.PrimaryAdapter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController("/template")
+@PrimaryAdapter
 public class TemplateController {
 
     private final TemplateUseCase template;
